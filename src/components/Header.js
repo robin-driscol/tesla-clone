@@ -8,12 +8,6 @@ import {useSelector} from 'react-redux'
 function Header() {
     const [burgerStatus, setBurgerStatus] = useState(false)
     const cars = useSelector(selectCars)
-
-    const changeBurgerStatus = () => {
-        setBurgerStatus(!burgerStatus)
-        const bodySelect = document.querySelector("body")
-        bodySelect.classList.toggle("hideScroll")
-    }
     
     return (
         <Container>
@@ -23,8 +17,8 @@ function Header() {
             <Menu>
 
             {cars && cars.map( (car, index) => (
-					<a key={index} href="#">{car}</a>
-				))}
+		<a key={index} href="#">{car}</a>
+		))}
             </Menu>
 
             <RightMenu>
@@ -40,8 +34,8 @@ function Header() {
                 
                 </CloseWrapper>
                 {cars && cars.map( (car, index) => (
-						<li><a key={index} href="#">{car}</a></li>
-					))}
+		<li><a key={index} href="#">{car}</a></li>
+		))}
                 
                 <li><a href="#">Existing Inventory</a></li>
                 <li><a href="#">Used Inventory</a></li>
@@ -49,11 +43,11 @@ function Header() {
                 <li><a href="#">Cybertruck</a></li>
                 <li><a href="#">Roadster</a></li>
                 <li> <a href="#">Semi</a> </li>
-				<li> <a href="#">Charging</a> </li>
-				<li> <a href="#">Power</a> </li>
-				<li> <a href="#">Components</a> </li>
-				<li> <a href="#">Utilities</a> </li>
-				<li> <a href="#">Test Drive</a> </li>
+		<li> <a href="#">Charging</a> </li>
+		<li> <a href="#">Power</a> </li>
+		<li> <a href="#">Components</a> </li>
+		<li> <a href="#">Utilities</a> </li>
+		<li> <a href="#">Test Drive</a> </li>
             </BurgerNav>
         </Container>
     )
